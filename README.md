@@ -1,14 +1,6 @@
-# Chá de Casa Nova — versão fiel à imagem de referência
+# Correção visual do Chá de Casa Nova
 
-Esta versão recria a página completa da imagem: barra superior, cabeçalho centralizado com porta e ramos decorativos, data e endereço, categorias com ícones, cartões de presentes com fotos, botões de reserva e rodapé com links.
+Atualização da ilustração da porta: agora o recorte contém a porta inteira, os dois vasos e o piso, sem cortar o desenho. A imagem foi redimensionada para evitar sobreposição com o título.
 
-## Publicar no GitHub Pages
-1. Extraia todos os arquivos deste ZIP.
-2. Envie **todos** os arquivos para a raiz do repositório `cha-casa-nova`, substituindo o `index.html` antigo.
-3. Não renomeie nem mova os JPGs: eles precisam ficar junto do HTML.
-4. Faça commit e aguarde o GitHub Pages publicar.
-5. Abra o site e pressione Ctrl+F5.
-
-## Reservas
-No `index.html`, preencha `API_URL` com a URL `/exec` do Apps Script para habilitar reservas compartilhadas entre visitantes. Sem essa configuração, a interface aparece, mas as reservas não serão registradas no backend.
-Os preços e links são editados no array `PRODUCTS`. Preencha `amazonUrl` e/ou `mercadoLivreUrl` com links reais de cada produto.
+## Atualização no GitHub Pages
+Envie todos os arquivos deste ZIP para a raiz do repositório e substitua os arquivos existentes. `index.html` e todas as imagens JPG devem ficar lado a lado. Faça commit e depois atualize o site com Ctrl+F5.
