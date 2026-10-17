@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>Chá de Casa Nova | Lucas e Leticia</title>
+  <style>
+    :root{--bg:#fcfaf7;--paper:#fffdfa;--ink:#513449;--muted:#806d79;--line:#e8dce1;--accent:#a72c50;--accent2:#b84b68;--danger:#a43d35;--shadow:0 8px 28px #5b2e4309}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+    a{color:inherit}.hero{padding:54px 20px 42px;text-align:center;background:var(--bg);border-bottom:1px solid var(--line);position:relative}
+    .eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.82rem;color:var(--ink);font-weight:500}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(2.8rem,7vw,5rem);line-height:1.04;margin:12px 0;color:var(--accent);font-style:italic}.hero p{max-width:610px;margin:0 auto;color:var(--muted);font-size:1.04rem}
+    main{max-width:1100px;padding:28px 18px 60px;margin:auto}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .search{flex:1;min-width:210px;max-width:440px;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:12px 14px;font:inherit;color:var(--ink)}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 12px;cursor:pointer;font:inherit;font-size:.88rem}.filter.active{background:var(--accent);border-color:var(--accent);color:white}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px}.card{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+    .card-top{height:4px;background:linear-gradient(90deg,#a72c50,#d7a4b4)}.card-body{padding:18px;display:flex;flex-direction:column;gap:9px;flex:1}.category{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}.card h2{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:500;line-height:1.2;margin:0}.desc{color:var(--muted);font-size:.9rem;min-height:2.6em}.price{font-size:1.25rem;font-weight:700;margin-top:3px}.price small{font-size:.75rem;font-weight:400;color:var(--muted)}
+    .status{font-size:.83rem;color:var(--muted)}.status.reserved{color:#8b5c23;font-weight:600}.actions{display:grid;gap:8px;margin-top:auto;padding-top:7px}.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;border:0;border-radius:10px;padding:10px 12px;font:inherit;font-size:.9rem;font-weight:650;cursor:pointer}.btn.primary{background:var(--accent);color:#fff}.btn.secondary{border:1px solid #c99aaa;background:#fffdfa;color:var(--ink)}.btn:disabled{opacity:.5;cursor:not-allowed}
+    .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:45px 15px}.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:500;margin:0 0 5px;color:#513449;text-align:center}.section-sub{color:var(--muted);margin:0 0 20px}.notice{background:#edf0e9;border:1px solid #d9e0d4;padding:14px 16px;border-radius:12px;color:#46564a;font-size:.9rem;margin:0 0 24px}
+    dialog{border:1px solid var(--line);border-radius:18px;padding:0;width:min(440px,calc(100% - 28px));color:var(--ink);background:var(--paper);box-shadow:0 24px 80px #0003}dialog::backdrop{background:#17231c88}.modal{padding:24px}.modal h2{font-family:Georgia,serif;font-weight:500;font-size:1.7rem;margin:0 0 6px}.modal p{color:var(--muted);font-size:.92rem}.field{display:grid;gap:6px;margin:14px 0}.field label{font-size:.87rem;font-weight:650}.field input{border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit;background:white}.modal-actions{display:flex;gap:8px;margin-top:20px}.modal-actions>*{flex:1}.message{font-size:.88rem;margin-top:12px;color:var(--danger)}footer{text-align:center;padding:25px 18px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+
+    .invitation-hero{padding:42px 18px 30px;background:#fcfaf7;border-bottom:0;text-align:center}
+    .invite-kicker{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.6rem,4vw,2.5rem);letter-spacing:.32em;color:#513449;font-weight:500}
+    .invitation-hero h1{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-style:italic;font-size:clamp(3.4rem,9vw,6rem);font-weight:400;color:#a72c50;line-height:.95;margin:8px 0 10px}
+    .door-art{display:block;width:min(390px,72vw);max-height:350px;object-fit:contain;margin:0 auto 2px;mix-blend-mode:multiply}
+    .couple-names{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-style:italic;font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.08;color:#a72c50;margin:0 auto 8px}
+    .event-date{display:flex;justify-content:center;align-items:center;gap:clamp(8px,2.5vw,28px);font-size:clamp(1rem,2.5vw,1.5rem);line-height:1.12;color:#513449;margin:8px auto 20px}
+    .event-date strong{font-size:clamp(3.4rem,8vw,5rem);font-weight:400;line-height:1}
+    .event-date .heart{color:#a72c50;font-size:1.1rem}
+    .address{max-width:700px;margin:0 auto;padding-top:15px;border-top:1px solid #b7a6ae;color:#513449;font-size:clamp(1rem,2.3vw,1.45rem)}
+    .invite-message{max-width:560px;margin:18px auto 0;color:#806d79;font-size:1rem}
+    @media(max-width:560px){.invitation-hero{padding-top:34px}.door-art{width:min(320px,78vw);max-height:290px}.event-date{gap:8px}.address{max-width:340px}}
+\n    @media(max-width:560px){.hero{padding:42px 18px 34px}.toolbar{align-items:stretch}.search{max-width:none}.filters{flex-wrap:nowrap;overflow:auto;padding-bottom:5px}.filter{white-space:nowrap}.card .desc{min-height:0}}
+  </style>
+</head>
+<body>
+  <header class="hero invitation-hero" id="inicio">
+    <div class="invite-kicker">CHÁ DE</div>
+    <h1>Casa nova</h1>
+    <img class="door-art" src="porta-convite.jpg" alt="Ilustração em traço fino de uma porta com vasos de plantas">
+    <div class="couple-names">Lucas e Leticia</div>
+    <div class="event-date">
+      <span>Domingo<br>às 16h</span>
+      <span class="heart">♥</span>
+      <strong>25</strong>
+      <span class="heart">♥</span>
+      <span>Out<br>2026</span>
+    </div>
+    <div class="address">Rua: Pioneiro Walcyr Baveloni, 133, Jardim Paulista IV</div>
+    <p class="invite-message">Estamos felizes em compartilhar esse novo capítulo com você. Escolha um presente para nosso novo lar.</p>
+  </header>
+  <main>
+    <div class="notice">♡ Os preços são referenciais e podem mudar na loja. A compra é feita diretamente na Amazon ou no Mercado Livre. Reserve o item antes de comprar para avisar os demais convidados.</div>
+    <div id="presentes"></div><h2 class="section-title">Lista de presentes</h2>
+    <p class="section-sub">Escolha um presente para nosso novo lar.</p>
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="Buscar presente..." aria-label="Buscar presente">
+      <div id="filters" class="filters"></div>
+    </div>
+    <section id="grid" class="grid" aria-live="polite"><div class="empty">Carregando presentes…</div></section>
+  </main>
+  <section id="presenca" style="max-width:1000px;margin:0 auto 30px;padding:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center">
+    <span style="font-size:1.8rem;color:var(--accent)">♡</span>
+    <div><strong style="font-size:1.15rem;font-weight:500">Confirme sua presença</strong><div style="font-size:.9rem;color:var(--muted)">Sua presença tornará esse dia ainda mais especial.</div></div>
+    <a class="btn secondary" href="https://wa.me/?text=Ol%C3%A1%2C%20Lucas%20e%20Leticia!%20Confirmo%20minha%20presen%C3%A7a%20no%20Ch%C3%A1%20de%20Casa%20Nova%20do%20dia%2025%2F10%2F2026." target="_blank" rel="noopener noreferrer">Confirmar pelo WhatsApp ↗</a>
+  </section>
+  <footer><span style="color:var(--accent);font-size:1.2rem">♥</span><br>Um novo lar para viver grandes histórias<br><span style="font-size:.78rem">Lucas e Leticia · Chá de Casa Nova · 25.10.2026</span></footer>
+
+  <dialog id="reserveDialog">
+    <form id="reserveForm" class="modal">
+      <h2>Reservar presente</h2>
+      <p id="reserveDescription"></p>
+      <div class="field"><label for="guestName">Seu nome</label><input id="guestName" name="guestName" maxlength="80" required autocomplete="name" placeholder="Como podemos te chamar?"></div>
+      <div class="field"><label for="guestContact">Contato (opcional)</label><input id="guestContact" name="guestContact" maxlength="100" placeholder="WhatsApp ou e-mail"></div>
+      <div class="modal-actions"><button type="button" id="cancelReserve" class="btn secondary">Cancelar</button><button id="confirmReserve" class="btn primary" type="submit">Confirmar reserva</button></div>
+      <div id="reserveMessage" class="message" role="alert"></div>
+    </form>
+  </dialog>
+  <script>
+    // Cole aqui a URL do Web App do Google Apps Script após publicar.
+    const API_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+
+    // Edite esta lista com seus presentes. Os links podem ser da Amazon e/ou Mercado Livre.
+    const PRODUCTS = [
+      {id:"p001",name:"Jogo de panelas",category:"Cozinha",price:249.90,description:"Um conjunto prático para as refeições do dia a dia.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p002",name:"Jogo de pratos",category:"Cozinha",price:129.90,description:"Para montar uma mesa bonita e funcional.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p003",name:"Jogo de copos",category:"Cozinha",price:49.90,description:"Copos para receber amigos e família.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p004",name:"Kit de utensílios",category:"Cozinha",price:69.90,description:"Utensílios úteis para facilitar o preparo.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p005",name:"Jogo de toalhas",category:"Banheiro",price:99.90,description:"Toalhas macias para o dia a dia.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p006",name:"Jogo de lençol",category:"Quarto",price:119.90,description:"Conforto para deixar o quarto mais aconchegante.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p007",name:"Organizadores",category:"Organização",price:59.90,description:"Para aproveitar melhor os espaços da casa.",amazonUrl:"",mercadoLivreUrl:""},
+      {id:"p008",name:"Luminária decorativa",category:"Decoração",price:89.90,description:"Um toque acolhedor para o novo lar.",amazonUrl:"",mercadoLivreUrl:""}
+    ];
+
+    let reservations = {};
+    let selectedCategory = "Todos";
+    let selectedProduct = null;
+    const money = value => Number(value).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+    const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const apiConfigured = () => API_URL.startsWith("https://script.google.com/");
+
+    async function api(action, payload={}) {
+      if (!apiConfigured()) throw new Error("A reserva ainda não foi configurada. O responsável pela página precisa publicar o Apps Script e informar a URL.");
+      const response = await fetch(API_URL, {method:"POST",redirect:"follow",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action,...payload})});
+      if (!response.ok) throw new Error("Não foi possível conectar ao sistema de reservas.");
+      const data = await response.json();
+      if (!data.ok) throw new Error(data.error || "Ocorreu um erro.");
+      return data;
+    }
+    async function loadReservations() {
+      try { const data = await api("list"); reservations = data.reservations || {}; }
+      catch(e) { console.warn(e.message); reservations = {}; }
+      render();
+    }
+    function categories() { return ["Todos",...new Set(PRODUCTS.map(p=>p.category))]; }
+    function renderFilters() {
+      document.getElementById("filters").innerHTML = categories().map(c=>`<button class="filter ${c===selectedCategory?"active":""}" data-category="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join("");
+      document.querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>{selectedCategory=b.dataset.category;renderFilters();render();}));
+    }
+    function render() {
+      const q = document.getElementById("search").value.trim().toLocaleLowerCase("pt-BR");
+      const items = PRODUCTS.filter(p=>(selectedCategory==="Todos"||p.category===selectedCategory)&&(`${p.name} ${p.category} ${p.description}`.toLocaleLowerCase("pt-BR").includes(q)));
+      const grid = document.getElementById("grid");
+      if (!items.length) { grid.innerHTML='<div class="empty">Nenhum presente encontrado.</div>'; return; }
+      grid.innerHTML = items.map(p=>{
+        const r = reservations[p.id];
+        const reserved = !!r;
+        const links = [
+          p.amazonUrl ? `<a class="btn secondary" href="${escapeHtml(p.amazonUrl)}" target="_blank" rel="noopener noreferrer">Ver na Amazon ↗</a>` : "",
+          p.mercadoLivreUrl ? `<a class="btn secondary" href="${escapeHtml(p.mercadoLivreUrl)}" target="_blank" rel="noopener noreferrer">Ver no Mercado Livre ↗</a>` : ""
+        ].filter(Boolean).join("");
+        return `<article class="card"><div class="card-top"></div><div class="card-body"><div class="category">${escapeHtml(p.category)}</div><h2>${escapeHtml(p.name)}</h2><div class="desc">${escapeHtml(p.description||"")}</div><div class="price">${money(p.price)} <small>preço indicativo</small></div><div class="status ${reserved?"reserved":""}">${reserved?`Reservado por ${escapeHtml(r.name)}`:"Ainda disponível"}</div><div class="actions">${links || '<span class="status">Adicione um link de compra no cadastro do produto.</span>'}<button class="btn ${reserved?"secondary":"primary"}" data-reserve="${escapeHtml(p.id)}" ${reserved?"disabled":""}>${reserved?"Presente reservado":"♡ Reservar presente"}</button></div></div></article>`;
+      }).join("");
+      document.querySelectorAll("[data-reserve]").forEach(b=>b.addEventListener("click",()=>openReserve(b.dataset.reserve)));
+    }
+    function openReserve(id) {
+      selectedProduct = PRODUCTS.find(p=>p.id===id);
+      if (!selectedProduct || reservations[id]) return;
+      document.getElementById("reserveDescription").textContent = `${selectedProduct.name} · ${money(selectedProduct.price)}`;
+      document.getElementById("reserveMessage").textContent = "";
+      document.getElementById("guestName").value = "";
+      document.getElementById("guestContact").value = "";
+      document.getElementById("reserveDialog").showModal();
+    }
+    document.getElementById("search").addEventListener("input",render);
+    document.getElementById("cancelReserve").addEventListener("click",()=>document.getElementById("reserveDialog").close());
+    document.getElementById("reserveForm").addEventListener("submit",async e=>{
+      e.preventDefault(); if(!selectedProduct)return;
+      const button=document.getElementById("confirmReserve"), msg=document.getElementById("reserveMessage");
+      button.disabled=true;button.textContent="Reservando…";msg.textContent="";
+      try {
+        await api("reserve",{productId:selectedProduct.id,name:document.getElementById("guestName").value.trim(),contact:document.getElementById("guestContact").value.trim()});
+        await loadReservations();
+        document.getElementById("reserveDialog").close();
+        alert("Presente reservado! Obrigado pelo carinho 💚");
+      } catch(err) { msg.textContent=err.message || "Não foi possível reservar. Atualize a página e tente novamente."; }
+      finally {button.disabled=false;button.textContent="Confirmar reserva";}
+    });
+    renderFilters(); render(); loadReservations();
+  </script>
+</body>
+</html>
