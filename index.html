@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fcfaf7">
+<title>Chá de Casa Nova — Lucas e Leticia</title>
+<style>
+:root{--cream:#fcfaf7;--paper:#fffdfa;--wine:#57364b;--burgundy:#ad294f;--rose:#d9bfc9;--line:#e7dbe0;--muted:#806d79;--shadow:0 3px 14px rgba(73,43,59,.05)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--wine);font-family:Georgia,'Times New Roman',serif;font-weight:400}
+a{color:inherit}.topbar{height:62px;border-bottom:1px solid var(--line);background:rgba(255,253,250,.97);display:flex;align-items:center;justify-content:space-between;padding:0 max(4.5%,calc((100vw - 1320px)/2));gap:20px}
+.brand{display:flex;align-items:center;gap:18px;text-decoration:none;white-space:nowrap;font-size:15px;letter-spacing:.28em;text-transform:uppercase}.brand-house{width:32px;height:32px;color:var(--burgundy)}.brand em{font-size:25px;letter-spacing:.02em;text-transform:none;color:var(--burgundy);font-weight:600}
+.nav{display:flex;align-items:center;gap:30px}.nav a{text-decoration:none;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}.nav a:hover{color:var(--burgundy)}
+.hero{position:relative;text-align:center;min-height:706px;padding:24px 20px 28px;overflow:hidden;border-bottom:0;background:var(--cream)}
+.botanical{position:absolute;width:125px;opacity:.93;pointer-events:none;mix-blend-mode:multiply}.botanical.left{left:0;top:44px}.botanical.right{right:0;top:330px}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}.kicker{font-size:clamp(24px,3vw,38px);letter-spacing:.31em;line-height:1.15;margin:0 0 0 8px}.script-title{font-family:"Snell Roundhand","Segoe Script","Brush Script MT",cursive;font-style:italic;font-weight:500;color:var(--burgundy);font-size:clamp(48px,7vw,78px);line-height:1.03;margin:0 0 0}.door{display:block;width:355px;height:330px;object-fit:contain;margin:-1px auto -1px;mix-blend-mode:multiply}.names{font-family:"Snell Roundhand","Segoe Script","Brush Script MT",cursive;font-style:italic;font-weight:500;color:var(--burgundy);font-size:clamp(42px,6vw,65px);line-height:1.03;margin:0 auto 7px}
+.date-row{display:flex;align-items:center;justify-content:center;gap:clamp(9px,2.2vw,25px);font-size:17px;line-height:1.15;letter-spacing:.07em;text-transform:uppercase}.date-row .date-day{font-size:53px;line-height:1;font-weight:400;letter-spacing:0}.date-row .heart{color:var(--burgundy);font-size:14px}.date-row .time{display:block;text-transform:none;letter-spacing:0;font-size:18px;margin-top:4px}
+.address{max-width:650px;margin:13px auto 0;border-top:1px solid #b9a7b0;padding-top:10px;font-size:17px;line-height:1.4}.hero-message{font-size:14px;color:var(--muted);margin:12px auto 0;max-width:570px;line-height:1.5}
+.section{max-width:1260px;margin:0 auto;padding:18px 26px 0}.section-divider{display:flex;align-items:center;gap:18px;color:#b24665;margin:0 0 12px}.section-divider:before,.section-divider:after{content:"";height:1px;background:#ddcbd2;flex:1}.section-divider span{font-size:16px}
+.section-title{text-align:center;font-weight:400;font-size:40px;line-height:1.1;margin:0;color:var(--wine)}.section-subtitle{text-align:center;font-size:18px;color:#78566a;margin:4px 0 18px}.short-rule{height:1px;width:72px;background:#cdb6c0;margin:0 auto 22px}
+.categories{display:flex;justify-content:space-between;align-items:center;gap:0;margin:0 0 27px;overflow-x:auto;padding:0 0 2px}.cat{border:0;border-right:1px solid #dfcfd6;background:transparent;color:#6e4d61;padding:5px 17px;display:flex;align-items:center;gap:10px;white-space:nowrap;cursor:pointer;font-family:Georgia,serif;font-size:14px}.cat:last-child{border-right:0}.cat.active{color:var(--wine);border-bottom:2px solid var(--burgundy)}.cat svg{width:25px;height:25px;stroke:currentColor;stroke-width:1.35;fill:none;flex-shrink:0}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.search{display:none;width:300px;max-width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font:14px Georgia,serif;color:var(--wine)}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.product{border:1px solid #e4d6dc;border-radius:5px;padding:11px;background:rgba(255,253,250,.65);min-width:0}.product-img-wrap{height:164px;position:relative;margin-bottom:10px;overflow:hidden;border-radius:3px;background:#f0ebe5}.product-img{width:100%;height:100%;object-fit:cover;display:block}.heart-btn{position:absolute;right:6px;top:6px;border:0;background:#fffdfaee;color:var(--burgundy);border-radius:50%;font-size:21px;width:29px;height:29px;cursor:pointer;line-height:1}.product-category{font-size:10px;letter-spacing:.23em;text-transform:uppercase;color:#8b6478;margin:0 0 5px}.product h3{font-size:18px;font-weight:400;margin:0 0 5px;line-height:1.2}.price{font-size:20px;margin:0 0 10px}.price small{font-size:11px;color:var(--muted);white-space:nowrap}.product-actions{display:grid;grid-template-columns:1fr 1.1fr;gap:6px}.btn{display:flex;justify-content:center;align-items:center;gap:7px;text-decoration:none;border:1px solid #8e536b;background:transparent;color:var(--wine);border-radius:3px;padding:9px 7px;font-family:Georgia,serif;font-size:12px;white-space:nowrap;cursor:pointer}.btn.shop{background:#5b354b;color:#fff;border-color:#5b354b}.btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.5;flex-shrink:0}.reserved{font-size:12px;color:#956079;margin:6px 0 0}
+.bottom-links{max-width:1260px;margin:42px auto 0;padding:0 26px}.bottom-divider{display:flex;align-items:center;gap:18px;color:#b24665;margin-bottom:15px}.bottom-divider:before,.bottom-divider:after{content:"";height:1px;background:#ddcbd2;flex:1}.bottom-divider span{font-size:16px}.link-panels{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #dfd1d7;padding-bottom:20px}.link-panel{display:flex;align-items:center;gap:22px;padding:4px 8%;text-decoration:none;min-width:0}.link-panel+ .link-panel{border-left:1px solid #d8c5ce}.link-panel svg{width:42px;height:42px;stroke:#69465c;stroke-width:1.3;fill:none;flex-shrink:0}.link-panel strong{font-size:19px;font-weight:400;display:block}.link-panel small{font-size:13px;color:var(--muted);display:block;margin-top:3px}.chevron{font-size:26px;margin-left:auto}
+footer{display:flex;align-items:center;justify-content:center;gap:20px;text-align:center;padding:19px 12px 27px;color:#76546a;font-size:11px;letter-spacing:.23em;text-transform:uppercase}footer img{width:78px;height:30px;object-fit:cover;object-position:center;opacity:.9}footer .foot-heart{color:var(--burgundy);font-size:15px}
+dialog{border:1px solid var(--line);border-radius:8px;padding:0;width:min(420px,calc(100% - 28px));color:var(--wine);background:var(--paper);box-shadow:0 24px 80px #0003}dialog::backdrop{background:#39263488}.modal{padding:25px}.modal h2{font-weight:400;font-size:27px;margin:0 0 8px}.modal p{color:var(--muted);font-size:14px}.field{display:grid;gap:6px;margin:14px 0}.field label{font-size:13px}.field input{border:1px solid var(--line);border-radius:4px;padding:11px;font:15px Georgia,serif;background:white}.modal-actions{display:flex;gap:8px;margin-top:18px}.modal-actions>*{flex:1}.message{font-size:13px;color:#a43d35;margin-top:10px}
+@media(min-width:1300px){.hero{min-height:706px}.door{height:330px}}
+@media(max-width:850px){.topbar{height:auto;min-height:62px;padding:12px 18px;flex-wrap:wrap}.nav{gap:14px}.nav a{font-size:10px}.brand{font-size:12px;gap:8px}.brand em{font-size:21px}.botanical{width:85px}.hero{min-height:0;padding-bottom:30px}.door{width:300px;height:280px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.cat{padding:5px 12px}.section{padding-left:18px;padding-right:18px}.bottom-links{padding:0 18px}}
+@media(max-width:560px){.topbar{justify-content:center}.brand{width:100%;justify-content:center}.nav{width:100%;justify-content:center;gap:12px}.nav a{font-size:9px;letter-spacing:.02em}.hero{padding:27px 14px 25px}.botanical{width:54px;opacity:.45}.botanical.left{top:65px}.botanical.right{top:290px}.kicker{font-size:23px}.script-title{font-size:51px}.door{width:250px;height:230px}.names{font-size:43px}.date-row{gap:7px;font-size:11px}.date-row .date-day{font-size:42px}.date-row .time{font-size:14px}.address{font-size:14px;max-width:350px}.hero-message{font-size:13px}.section{padding:15px 13px 0}.section-title{font-size:31px}.section-subtitle{font-size:15px}.categories{justify-content:flex-start;margin-bottom:17px}.cat{font-size:12px;padding:5px 10px;gap:6px}.cat svg{width:21px;height:21px}.products{grid-template-columns:1fr;gap:12px}.product{padding:10px}.product-img-wrap{height:210px}.product-actions{grid-template-columns:1fr 1fr}.btn{font-size:12px}.bottom-links{margin-top:28px;padding:0 13px}.link-panels{grid-template-columns:1fr}.link-panel{padding:15px 5%;gap:15px}.link-panel+.link-panel{border-left:0;border-top:1px solid #d8c5ce}.link-panel strong{font-size:17px}footer{gap:8px;font-size:8px;letter-spacing:.13em}footer img{width:40px}}
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="#inicio" aria-label="Chá de Casa Nova">
+    <svg class="brand-house" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 18 20 4 35 18M9 16v19h22V16M17 35V23h7v12" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+    <span>Chá de <em>casa nova</em></span>
+  </a>
+  <div class="nav"><a href="#inicio">Início</a><a href="#presentes">Lista de presentes</a><a href="#presenca">Confirmar presença</a></div>
+</nav>
+<header class="hero" id="inicio">
+  <img class="botanical left" src="ramo-esquerdo.jpg" alt="">
+  <img class="botanical right" src="ramo-direito.jpg" alt="">
+  <div class="hero-inner">
+    <div class="kicker">C H Á &nbsp; D E</div>
+    <h1 class="script-title">Casa nova</h1>
+    <img class="door" src="porta-convite.jpg" alt="Ilustração de uma porta com plantas em vasos">
+    <div class="names">Lucas e Leticia</div>
+    <div class="date-row">
+      <span>Domingo<br><span class="time">às 16h</span></span><span class="heart">♥</span><span class="date-day">25</span><span class="heart">♥</span><span>Out<br>2026</span>
+    </div>
+    <div class="address">Rua: Pioneiro Walcyr Baveloni, 133, Jardim Paulista IV</div>
+  </div>
+</header>
+<main>
+<section class="section" id="presentes">
+  <div class="section-divider"><span>♥</span></div>
+  <h2 class="section-title">Lista de presentes</h2>
+  <p class="section-subtitle">Escolha um presente para nosso novo lar</p>
+  <div class="short-rule"></div>
+  <div class="categories" id="categories">
+    <button class="cat active" data-cat="Todos"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/></svg>Todos</button>
+    <button class="cat" data-cat="Cozinha"><svg viewBox="0 0 24 24"><path d="M5 8h14v12H5zM3 8h18M8 5h8M10 3h4M2 11H5M19 11h3"/></svg>Cozinha</button>
+    <button class="cat" data-cat="Mesa e Servir"><svg viewBox="0 0 24 24"><path d="M5 2v7M2 2v5q0 4 3 4t3-4V2M5 11v11M16 2c-3 3-3 8 0 10v10M16 2v10M19 2v20"/></svg>Mesa e Servir</button>
+    <button class="cat" data-cat="Quarto"><svg viewBox="0 0 24 24"><path d="M3 21V5h18v16M3 15h18M5 15v-5h5q3 0 3 5M13 15v-4q0-2 3-2h3v6"/></svg>Quarto</button>
+    <button class="cat" data-cat="Banheiro"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 4V2h8v2M8 8h8M8 12h8M8 16h5"/></svg>Banheiro</button>
+    <button class="cat" data-cat="Decoração"><svg viewBox="0 0 24 24"><path d="M12 12v10M7 22h10M12 12C2 10 4 3 8 4c3 1 4 5 4 8M12 12c0-8 6-10 8-6 1 3-3 6-8 6M12 8C9 2 13 1 15 3c2 2 0 5-3 5"/></svg>Decoração</button>
+    <button class="cat" data-cat="Eletrodomésticos"><svg viewBox="0 0 24 24"><path d="M7 2h10l2 20H5L7 2zM8 6h8M9 10h6M10 15h4M12 18v2"/></svg>Eletrodomésticos</button>
+  </div>
+  <div class="toolbar"><input id="search" class="search" type="search" placeholder="Buscar presente..." aria-label="Buscar presente"></div>
+  <div class="products" id="products"></div>
+</section>
+<section class="bottom-links" id="presenca">
+  <div class="bottom-divider"><span>♥</span></div>
+  <div class="link-panels">
+    <a class="link-panel" href="#presentes"><svg viewBox="0 0 48 48"><path d="M5 20h38v24H5zM3 14h42v8H3zM24 14v30M24 14C7 14 5 2 13 2c6 0 11 8 11 12ZM24 14C41 14 43 2 35 2c-6 0-11 8-11 12Z"/></svg><span><strong>Lista de presentes</strong><small>Veja todos os itens para o nosso novo lar</small></span><span class="chevron">›</span></a>
+    <a class="link-panel" href="https://wa.me/?text=Ol%C3%A1%2C%20Lucas%20e%20Leticia!%20Confirmo%20minha%20presen%C3%A7a%20no%20Ch%C3%A1%20de%20Casa%20Nova%20do%20dia%2025%2F10%2F2026." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="9"/><path d="M7 44V35c0-8 7-13 17-13s17 5 17 13v9Z"/></svg><span><strong>Confirmar presença</strong><small>Sua presença tornará esse dia ainda mais especial</small></span><span class="chevron">›</span></a>
+  </div>
+</section>
+</main>
+<footer><img src="ramo-esquerdo.jpg" alt=""><span class="foot-heart">♥</span><span>Um novo lar para viver grandes histórias</span><span class="foot-heart">♥</span><img src="ramo-direito.jpg" alt=""></footer>
+<dialog id="reserveDialog"><form id="reserveForm" class="modal"><h2>Reservar presente</h2><p id="reserveDescription"></p><div class="field"><label for="guestName">Seu nome</label><input id="guestName" maxlength="80" required placeholder="Como podemos te chamar?"></div><div class="field"><label for="guestContact">Contato (opcional)</label><input id="guestContact" maxlength="100" placeholder="WhatsApp ou e-mail"></div><div class="modal-actions"><button type="button" class="btn" id="cancelReserve">Cancelar</button><button type="submit" class="btn shop" id="confirmReserve">Reservar presente</button></div><div class="message" id="reserveMessage"></div></form></dialog>
+<script>
+const API_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+const PRODUCTS = [
+{id:"p001",name:"Jogo de panelas",category:"Cozinha",price:249.90,description:"Um conjunto prático para as refeições do dia a dia.",image:"produto-panelas.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p002",name:"Jogo de toalhas",category:"Banheiro",price:99.90,description:"Toalhas macias para o dia a dia.",image:"produto-toalhas.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p003",name:"Jogo de lençol",category:"Quarto",price:119.90,description:"Conforto para deixar o quarto mais aconchegante.",image:"produto-lencol.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p004",name:"Jogo de pratos",category:"Mesa e Servir",price:129.90,description:"Para montar uma mesa bonita e funcional.",image:"produto-panelas.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p005",name:"Jogo de copos",category:"Mesa e Servir",price:49.90,description:"Copos para receber amigos e família.",image:"produto-toalhas.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p006",name:"Kit de utensílios",category:"Cozinha",price:69.90,description:"Utensílios úteis para facilitar o preparo.",image:"produto-panelas.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p007",name:"Vaso decorativo",category:"Decoração",price:59.90,description:"Um detalhe delicado para nosso novo lar.",image:"produto-lencol.jpg",amazonUrl:"",mercadoLivreUrl:""},
+{id:"p008",name:"Air fryer",category:"Eletrodomésticos",price:299.90,description:"Praticidade para preparar refeições.",image:"produto-panelas.jpg",amazonUrl:"",mercadoLivreUrl:""}
+];
+let activeCategory="Todos", selectedProduct=null, reservations={};
+const money=n=>Number(n).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function api(action,payload={}){if(!API_URL.startsWith("https://script.google.com/"))throw Error("Reservas ainda não configuradas. Configure a URL do Apps Script no index.html.");const r=await fetch(API_URL,{method:"POST",redirect:"follow",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action,...payload})});const d=await r.json();if(!d.ok)throw Error(d.error||"Não foi possível concluir.");return d}
+async function loadReservations(){try{const d=await api("list");reservations=d.reservations||{}}catch(e){reservations={};}renderProducts()}
+function renderProducts(){const q=document.getElementById("search").value.trim().toLowerCase();const items=PRODUCTS.filter(p=>(activeCategory==="Todos"||p.category===activeCategory)&&(`${p.name} ${p.category}`.toLowerCase().includes(q)));document.getElementById("products").innerHTML=items.map(p=>{const r=reservations[p.id];const links=[p.amazonUrl?`<a class="btn shop" target="_blank" rel="noopener" href="${esc(p.amazonUrl)}"><svg viewBox="0 0 24 24"><path d="M4 12V4h8M11 5h8v8M19 5 9 15M5 19h14"/></svg>Ver na loja</a>`:"",p.mercadoLivreUrl?`<a class="btn shop" target="_blank" rel="noopener" href="${esc(p.mercadoLivreUrl)}">Mercado Livre ↗</a>`:""].filter(Boolean).join("");return `<article class="product"><div class="product-img-wrap"><img class="product-img" src="${esc(p.image)}" alt="${esc(p.name)}"><button class="heart-btn" aria-label="Reservar ${esc(p.name)}" data-reserve="${p.id}">♡</button></div><div class="product-category">${esc(p.category)}</div><h3>${esc(p.name)}</h3><p class="price">${money(p.price)} <small>preço indicativo</small></p><div class="product-actions">${links||`<button class="btn shop" type="button" data-store="${p.id}"><svg viewBox="0 0 24 24"><path d="M4 12V4h8M11 5h8v8M19 5 9 15M5 19h14"/></svg>Ver na loja</button>`}<button class="btn" data-reserve="${p.id}" ${r?"disabled":""}><svg viewBox="0 0 24 24"><path d="M20 8c0-3-4-5-8 0-4-5-8-3-8 0 0 5 8 12 8 12s8-7 8-12Z"/></svg>${r?"Reservado":"Reservar presente"}</button></div>${r?`<p class="reserved">Reservado por ${esc(r.name)}</p>`:""}</article>`}).join("");document.querySelectorAll("[data-reserve]").forEach(b=>b.addEventListener("click",()=>openReserve(b.dataset.reserve)));document.querySelectorAll("[data-store]").forEach(b=>b.addEventListener("click",()=>openReserve(b.dataset.store)))}
+function openReserve(id){selectedProduct=PRODUCTS.find(p=>p.id===id);if(!selectedProduct||reservations[id])return;document.getElementById("reserveDescription").textContent=`${selectedProduct.name} · ${money(selectedProduct.price)}`;document.getElementById("reserveMessage").textContent="";document.getElementById("reserveDialog").showModal()}
+document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.cat;document.querySelectorAll("[data-cat]").forEach(x=>x.classList.toggle("active",x===b));renderProducts()}));
+document.getElementById("search").addEventListener("input",renderProducts);document.getElementById("cancelReserve").addEventListener("click",()=>document.getElementById("reserveDialog").close());
+document.getElementById("reserveForm").addEventListener("submit",async e=>{e.preventDefault();const btn=document.getElementById("confirmReserve"),msg=document.getElementById("reserveMessage");btn.disabled=true;try{await api("reserve",{productId:selectedProduct.id,name:document.getElementById("guestName").value.trim(),contact:document.getElementById("guestContact").value.trim()});await loadReservations();document.getElementById("reserveDialog").close();alert("Presente reservado! Obrigado pelo carinho.");}catch(err){msg.textContent=err.message}finally{btn.disabled=false}});
+renderProducts();loadReservations();
+</script>
+</body></html>
