@@ -31,7 +31,7 @@ dialog{border:1px solid var(--line);border-radius:8px;padding:0;width:min(420px,
 /* Ajuste visual pontual: ilustração maior e sem caixas retangulares nas laterais */
 .hero{min-height:740px;padding-top:24px;padding-bottom:26px}
 .door{width:min(500px,92vw)!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:0 auto!important}
-.botanical{display:none!important}
+.botanical{display:block!important;position:absolute;width:clamp(90px,12vw,165px);height:auto;opacity:.95;pointer-events:none;mix-blend-mode:multiply;z-index:0}.botanical.left{left:0;top:25px}.botanical.right{right:0;top:270px;transform:scaleX(-1)}
 @media(max-width:850px){
   .hero{min-height:0;padding-bottom:28px}
   .door{width:min(440px,90vw)!important;max-height:none!important}
@@ -40,6 +40,15 @@ dialog{border:1px solid var(--line);border-radius:8px;padding:0;width:min(420px,
   .hero{padding-top:25px;padding-bottom:25px}
   .door{width:min(360px,92vw)!important;max-height:none!important}
 }
+
+
+.side-phrase{position:absolute;top:205px;width:120px;display:flex;flex-direction:column;align-items:center;gap:7px;color:#76566a;font-size:11px;letter-spacing:.25em;line-height:1.2;text-align:center;z-index:2}
+.left-phrase{left:5.5%}.right-phrase{right:5.5%}
+.side-phrase b{font-size:18px;color:#ad294f;font-weight:400;margin-top:8px}
+.side-phrase i{display:block;width:52px;height:1px;background:#bda9b3;margin-top:9px}
+.botanical{display:block!important;position:absolute;width:clamp(90px,12vw,165px);height:auto;opacity:.95;pointer-events:none;mix-blend-mode:multiply;z-index:0}.botanical.left{left:0;top:25px}.botanical.right{right:0;top:270px;transform:scaleX(-1)}
+@media(max-width:850px){.side-phrase{top:200px;width:80px;font-size:9px;letter-spacing:.16em;gap:6px}.left-phrase{left:1.5%}.right-phrase{right:1.5%}.botanical{width:90px}.botanical.left{top:35px}.botanical.right{top:290px}}
+@media(max-width:560px){.side-phrase{display:none!important}.botanical{width:60px;opacity:.55}.botanical.left{top:75px}.botanical.right{top:300px}}
 
 </style>
 </head>
